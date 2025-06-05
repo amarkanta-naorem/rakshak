@@ -5,11 +5,11 @@ import { useState, useRef, useEffect } from 'react';
 import RakshakLogo from "@/components/Navbar/RakshakLogo";
 import NotificationModal from "@/components/Modal/NotificationModal";
 import SettingNavbarMenu from "@/components/Navbar/SettingNavbarMenu";
+import ActivityHistoryModal from "@/components/Modal/ActivityHistoryModal";
 import DashboardMenu from "@/components/Sidebar/SidebarMenus/DashboardMenu";
 import AttendanceMenu from "@/components/Sidebar/SidebarMenus/AttendanceMenu";
 import UserProfileNavbarMenu from "@/components/Navbar/UserProfileNavbarMenu";
 import NotificationNavbarMenu from "@/components/Navbar/NotificationNavbarMenu";
-import ActivityHistoryModal from "@/components/Modal/ActivityHistoryModal";
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }): React.ReactElement {
   const [isNotificationOpen, setIsNotificationOpen] = useState(false);
@@ -63,7 +63,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           <AttendanceMenu />
         </aside>
 
-        <main className="bg-[#f5f5f5] flex-1 p-4 h-[93vh] overflow-scroll no-scrollbar">
+        <main className="bg-gradient-to-br from-gray-50 to-gray-100 flex-1 h-[93vh] overflow-scroll no-scrollbar">
           {children}
         </main>
       </div>

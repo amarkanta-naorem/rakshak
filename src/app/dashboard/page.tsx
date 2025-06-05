@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "Learn more about Rakshak",
 };
 
-export default function DashboardPage({ children }: { children: React.ReactNode }): React.ReactElement {
+export default function DashboardPage() {
   return (
     <div className="w-full h-full flex items-center justify-center">
       <h1 className="font-semibold">Rakshak Dashboard</h1>

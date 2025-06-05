@@ -14,12 +14,9 @@ export const metadata: Metadata = {
     template: "Rakshak | %s",
   },
   description: "Rakshak",
-  themeColor: "#ffffff",
-  manifest: "/site.webmanifest",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
-    apple: "/android-chrome-192x192.png",
   },
 };
 
@@ -29,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <meta name="theme-color" content="#ffffff" />
       </head>
       <body className={`${poppins.variable} font-sans`}>
