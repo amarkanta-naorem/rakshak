@@ -311,17 +311,16 @@ export default function EmployeeAttendance() {
                                       <>
                                         <div className="grid grid-cols-3 text-gray-800 text-xs select-none">
                                           <div>In</div>
-                                          <div className="text-center text-gray-400">|</div>
+                                          <div className="text-center text-gray-400"></div>
                                           <div>Out</div>
                                         </div>
                                         <div className="grid grid-cols-3 text-gray-900 text-xs select-none">
                                           <div>{formatTime(attendance.punchIn)}</div>
-                                          <div className="text-center text-gray-400">|</div>
+                                          <div className="text-center text-gray-400"></div>
                                           <div>{formatTime(attendance.punchOut)}</div>
                                         </div>
                                       </>
-                                    ) : attendance?.status === "absent" &&
-                                      attendance?.reason ? (<p className="truncate text-red-600 font-medium">{attendance.reason}</p>) : (day && (
+                                    ) : attendance?.status === "absent" && attendance?.reason ? (<p className="truncate text-red-600 font-medium">{attendance.reason}</p>) : (day && (
                                         <div>
                                           <p className="truncate text-blue-600 font-medium">- -</p>
                                           <p className="truncate text-blue-600 font-medium">- -</p>
