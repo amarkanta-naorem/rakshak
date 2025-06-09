@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
 import { format, startOfMonth, endOfMonth, eachDayOfInterval, getDay, isSameDay, parseISO, startOfDay, isWithinInterval } from "date-fns";
-import DateRangePicker from "../DateRangePicker";
+import CustomDateRangePicker from "../DateRangePicker";
 
 interface Attendance {
   date: string;
@@ -180,7 +180,7 @@ export default function EmployeeAttendance() {
           <div>
             <div className="flex items-center">
               <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl">Attendance Management</h1>
-              <span className="ml-3 inline-flex items-center rounded-xl pthreadtext={#3778E1} px-3 py-[1px] text-sm font-semibold text-white">
+              <span className="ml-3 inline-flex items-center rounded-xl bg-[#3778E1] px-3 py-[1px] text-sm font-semibold text-white">
                 <span className="mr-2 h-2 w-2 animate-pulse rounded-full bg-white"></span>
                 Live
               </span>
@@ -216,7 +216,7 @@ export default function EmployeeAttendance() {
                     </span>
                     <div className="absolute inset-0 bg-[#1D6F42] transition-transform duration-500 transform -translate-x-full group-hover:translate-x-0 cursor-pointer"></div>
                   </button>
-                  <DateRangePicker setDateRange={setDateRange} />
+                  <CustomDateRangePicker setDateRange={setDateRange} />
                 </div>
               </div>
             ) : (
